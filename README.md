@@ -26,6 +26,48 @@ Select Prefix: The script will then fetch and display the prefixes announced by 
 
 View RPKI Data: The script will fetch and display the RPKI validation data for the selected prefix in a readable format. This includes whether the prefix's announcement is valid, invalid, or not found within the RPKI framework.
 
+Output samples:
+
+Tabbed (main script) 
+Fetching RPKI validation data for ASN {asn} and prefix {selected_prefix}...
+{
+    "messages": [],
+    "see_also": [],
+    "version": "0.3",
+    "data_call_name": "rpki-validation",
+    "data_call_status": "supported",
+    "cached": false,
+    "data": {
+        "validating_roas": [
+            {
+                "origin": "16509",
+                "prefix": "198.160.143.0/24",
+                "max_length": 24,
+                "validity": "valid"
+            }
+        ],
+        "status": "valid",
+        "validator": "routinator",
+        "resource": "16509",
+        "prefix": "198.160.143.0/24"
+    },
+    "query_id": "20240214225248-f604791c-03a5-4224-a616-e1791002a473",
+    "process_time": 12,
+    "server_id": "app142",
+    "build_version": "live.2024.2.7.194",
+    "status": "ok",
+    "status_code": 200,
+    "time": "2024-02-14T22:52:48.642954"
+}
+
+One lined (one line script)
+
+Selected prefix: 64.64.100.0/23
+
+Fetching RPKI validation data for ASN {asn} and prefix {selected_prefix}...
+{'messages': [], 'see_also': [], 'version': '0.3', 'data_call_name': 'rpki-validation', 'data_call_status': 'supported', 'cached': False, 'data': {'validating_roas': [{'origin': '16509', 'prefix': '64.64.100.0/23', 'max_length': 24, 'validity': 'valid'}, {'origin': '14618', 'prefix': '64.64.100.0/23', 'max_length': 24, 'validity': 'invalid_asn'}], 'status': 'valid', 'validator': 'routinator', 'resource': '16509', 'prefix': '64.64.100.0/23'}, 'query_id': '20240214225958-b4773569-d65f-4bc1-b4bf-9425cccc64e8', 'process_time': 23, 'server_id': 'app145', 'build_version': 'live.2024.2.7.194', 'status': 'ok', 'status_code': 200, 'time': '2024-02-14T22:59:58.364352'}
+
+
 Troubleshooting
 Ensure you have an active internet connection as the script fetches data from the RIPE Stat API.
 If you encounter any issues with fetching data, verify the ASN and prefix inputs are correct and retry.
@@ -33,3 +75,5 @@ For requests library installation issues, ensure you have pip installed and your
 
 License
 This tool is open-source and free to use. Modify and distribute as you see fit.
+
+
