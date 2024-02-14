@@ -26,7 +26,7 @@ Select Prefix: The script will then fetch and display the prefixes announced by 
 
 View RPKI Data: The script will fetch and display the RPKI validation data for the selected prefix in a readable format. This includes whether the prefix's announcement is valid, invalid, or not found within the RPKI framework.
 
-Output samples:
+Output samples: (see raw) https://raw.githubusercontent.com/chrisjchandler/RPKI_check_tool/main/README.md
         
 Tabbed (main script) 
 Fetching RPKI validation data for ASN {asn} and prefix {selected_prefix}...
